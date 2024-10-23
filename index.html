@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CreatorVault Landing Page</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    </head>
+    <body>
+        <section class="container">
+            <div class="container-header">
+                <h1 class="Intro-title">CreatorVault</h1>
+                <h1 class="Intro-desc"> Unlock Your Creative Power, Monetize
+                    Your Passion</h1>
+
+                <ul class="Intro-list">
+                    <li>Content Promotion </li>
+                    <li>Global Reach with marketing tips </li>
+                    <li>Ad fraud detection with Google policy compliance.</li>
+                </ul>
+
+                <button class="register-btn" onclick="scrollToForm()">Register
+                    or Login</button>
+
+                <div class="logo-container">
+                    <div class="logos">
+                        <img src="logo_img.png" alt="logo1">
+                        <img src="logo_img.png" alt="logo2">
+                        <img src="logo_img.png" alt="logo3">
+                        <img src="logo_img.png" alt="logo4">
+                        <img src="logo_img.png" alt="logo5">
+                        <img src="logo_img.png" alt="logo1">
+                        <img src="logo_img.png" alt="logo2">
+                        <img src="logo_img.png" alt="logo3">
+                        <img src="logo_img.png" alt="logo4">
+                        <img src="logo_img.png" alt="logo5">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-certifications">
+                <h2>Certifications & Compliance</h2>
+                <p>We adhere to the highest industry standards to ensure the
+                    success of our creators.</p>
+                <div class="certifications-grid">
+                    <div class="certification-item">
+                        <img src="./certificate-images/certificate_image1.jpeg"
+                            alt="Certification 1">
+                        <p>Certified Partner of Creator Platform X</p>
+                    </div>
+                    <div class="certification-item">
+                        <img src="certificate-images/certificate_image2.jpg"
+                            alt="Certification 2">
+                        <p>Compliant with Google Ads Policy</p>
+                    </div>
+                    <div class="certification-item">
+                        <img src="certificate-images/certificate_image3.jpg"
+                            alt="Certification 3">
+                        <p>ISO 9001:2023 Certified for Quality Management</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal pop-up -->
+            <div id="success-modal" class="modal" style="display:none;">
+                <div class="modal-content">
+                    <span class="close-button"
+                        onclick="closeModal()">&times;</span>
+                    <h2>Congratulations! 🎉🎉</h2>
+                    <p>Account created successfully. Login details will be sent
+                        to your email.</p>
+                </div>
+            </div>
+
+            <!-- Form  -->
+            <div class="floating-form">
+                <form id="creator-form" action="Target-url">
+                    <h2>Create Your Vault</h2>
+                    <p>Start your 'Vault to Wallet' journey for Free</p>
+
+                    <!-- Name Field -->
+                    <label for="name">First Name <span class="required">*</span>
+                    </label>
+                    <input type="text" id="name" name="name"
+                        placeholder="Your name" required>
+                    <span class="error" id="name-error"></span>
+
+                    <!-- Email Field -->
+                    <label for="email">Work Email <span
+                            class="required">*</span></label>
+                    <input type="email" id="email" name="email"
+                        placeholder="Your email" required>
+                    <span class="error" id="email-error"></span>
+
+                    <!-- Phone Field -->
+                    <label for="phone">Phone <span
+                            class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone"
+                        placeholder="+91 Your phone number" required>
+                    <span class="error" id="phone-error"></span>
+
+                    <!-- content -->
+                    <label for="content">The Content you create <span
+                            class="required">*</span></label>
+                    <select id="content" name="content" required>
+                        <option value>Select option</option>
+                        <option value="Writing">Writing</option>
+                        <option value="Photography">Photography</option>
+                        <option value="Editing">Editing</option>
+                        <option value="Designing">Designing</option>
+                        <option value="Craft making">Craft Making</option>
+                        <option value="Painting">Painting</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <span class="error" id="content-error"></span>
+
+                    <!-- UserName / Website Field -->
+                    <label for="website">Website</label>
+                    <input type="url" id="website" name="website"
+                        placeholder="Enter your webiste">
+                    <span class="error" id="website-error"></span>
+
+                    <button type="submit"
+                        onclick="return validateForm(event)"> Done Filling ✅
+                    </button>
+
+                    <p class="agreement">By signing up you agree to our <a
+                            href="#">Terms</a> and <a href="#">Privacy
+                            Policy</a>.</p>
+
+                </form>
+
+            </div>
+
+            <div class="container-features">
+                <h2>All the good things you get access to</h2>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="feature-text">
+                            <h3>Seamless Content Upload</h3>
+                            <p>Easily upload your premium content, such as
+                                eBooks, courses, photography, or digital
+                                products, to the platform. CreatorVault ensures
+                                a smooth and fast upload process, allowing
+                                creators to manage their content with just a few
+                                clicks.</p>
+                        </div>
+                        <i class="fa fa-upload" aria-hidden="true"></i>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-text">
+                            <h3>Customizable Pricing Models</h3>
+                            <p>Set flexible pricing options for your premium
+                                content. Choose from one-time payments,
+                                subscriptions, or bundles to offer the best
+                                value to your audience and maximize your revenue
+                                streams.</p>
+                        </div>
+                        <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-text">
+                            <h3>Exclusive Content for Subscribers</h3>
+                            <p>Allow your subscribers to access exclusive
+                                content with tier-based memberships. Engage your
+                                audience by offering special perks like early
+                                releases, behind-the-scenes content, or bonus
+                                material that enhances their experience.</p>
+                        </div>
+                        <i class="fa fa-unlock" aria-hidden="true"></i>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-text">
+                            <h3> Analytics and Performance Insights</h3>
+                            <p>Get detailed analytics on content performance.
+                                Track views, sales, and user engagement to make
+                                informed decisions about your offerings.
+                                Understand your audience better and optimize
+                                your products accordingly.</p>
+                        </div>
+                        <i class="fa fa-line-chart" aria-hidden="true"></i>
+
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-text">
+                            <h3>Secure Payment Integration</h3>
+                            <p>CreatorVault integrates secure payment gateways,
+                                ensuring that your transactions are safe and
+                                reliable. We support multiple payment methods,
+                                allowing your audience to pay conveniently from
+                                anywhere around the world.</p>
+                        </div>
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-text">
+                            <h3>User-Friendly Dashboard</h3>
+                            <p>Manage all your content, sales, and subscriptions
+                                from an intuitive dashboard. With easy-to-use
+                                tools, CreatorVault empowers creators to monitor
+                                their earnings, update content, and interact
+                                with their audience effortlessly.</p>
+                        </div>
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-advantages">
+                <h2>Reasons why you should own a Vault</h2>
+                <div class="advantages-grid">
+                    <!-- Advantage 1 -->
+                    <div class="advantage-box">
+                        <i class="fa-solid fa-handshake"></i>
+                        <h3>Seamless Integration for Creators</h3>
+                        <p>Quickly connect your content, tools, and platforms,
+                            making content management easier than ever.</p>
+                    </div>
+
+                    <!-- Advantage 2 -->
+                    <div class="advantage-box">
+                        <i class="fa fa-university" aria-hidden="true"></i>
+                        <h3>Optimized for Revenue Growth</h3>
+                        <p>Monetize your digital assets effectively with pricing
+                            models and marketing tools designed for profit.</p>
+                    </div>
+
+                    <!-- Advantage 3 -->
+                    <div class="advantage-box">
+                        <i class="fa fa-signal" aria-hidden="true"></i>
+                        <h3>Advanced Analytics Dashboard</h3>
+                        <p>Track performance and user behavior with detailed
+                            insights that help optimize your business
+                            strategy.</p>
+                    </div>
+
+                    <!-- Advantage 4 -->
+                    <div class="advantage-box">
+                        <i class="fa fa-modx" aria-hidden="true"></i>
+                        <h3>Secure Payments Integration</h3>
+                        <p>Ensure all transactions are safe and secure with
+                            trusted payment gateways that your users can rely
+                            on.</p>
+                    </div>
+
+                    <!-- Advantage 5 -->
+                    <div class="advantage-box">
+                        <i class="fa-solid fa-clipboard-user"></i>
+                        <h3>Customizable Membership Tiers</h3>
+                        <p>Create personalized membership levels that offer
+                            exclusive perks and content for loyal customers.</p>
+                    </div>
+
+                    <!-- Advantage 6 -->
+                    <div class="advantage-box">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <h3>24/7 Creator Support</h3>
+                        <p>Receive round-the-clock assistance to ensure your
+                            experience on the platform is smooth and
+                            uninterrupted.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Reviews">
+                <h2>What Our Happy Creators Say</h2>
+                <div class="review-container">
+                    <div class="review-box">
+                        <p>"CreatorVault has revolutionized the way I share and monetize my digital creations!"</p>
+                        <span>- Sarah K., Digital Artist</span>
+                    </div>
+                    <div class="review-box">
+                        <p>"The seamless integration and security features are a game changer. Highly recommend for creators!"</p>
+                        <span>- John M., Course Creator</span>
+                    </div>
+                    <div class="review-box">
+                        <p>"The analytics dashboard helped me track growth and boost my revenue like never before."</p>
+                        <span>- Emily W., Photographer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="partners">
+                <h2>Our Partners</h2>
+                <div class="partner-container">
+                    <div class="partner-box">
+                        <img src="logo_img.png" alt="Partner 1">
+                    </div>
+                    <div class="partner-box">
+                        <img src="logo_img.png" alt="Partner 2">
+                    </div>
+                    <div class="partner-box">
+                        <img src="logo_img.png" alt="Partner 3">
+                    </div>
+                    <div class="partner-box">
+                        <img src="logo_img.png" alt="Partner 4">
+                    </div>
+                </div>
+            </div>
+
+            <div class="final-quote">
+                <blockquote>"CreatorVault has empowered countless creators to take control of their digital products and grow their revenue."</blockquote>
+                <button class="register-btn" onclick="scrollToForm()">Register
+                    Now</button>
+            </div>
+
+        </section>
+
+        <footer class="site-footer">
+            <p>&copy; 2024 CreatorVault. All Rights Reserved.</p>
+            <button class="back-to-top-btn" onclick="scrollToTop()">Back to
+                Top</button>
+        </footer>
+
+        <script src="script.js" defer></script>
+    </body>
+</html>
